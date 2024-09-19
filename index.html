@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Part II : Navbar Responsive Dengan HTML, CSS, dan Javascript</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+<nav class="navbar">
+	<div class="container">
+		<a id="logo" href="https://ymlcodes.blogspot.com" class="logo">YMLCODES</a>
+		<ul class="menu">
+		    <li><span id="cloneLogo"></span></li>
+			<li><a href="#">Beranda</a></li>
+			<li><a href="#">Tentang</a></li>
+			<li><a href="#">Kategori</a></li>
+			<li><a href="#">Layanan</a></li>
+			<li><a href="#">Kontak Kami</a></li>
+		</ul>
+		<div class="tombol">
+		    &#9776;
+		</div>
+	</div>
+</nav>
+ 
+	<div>
+		<center>
+			<h2>Panduan Membuat Navbar Responsive dari  <a href="https://ymlcodes.blogspot.com/">ymlcodes.blogspot.com</a></h2>
+		</center>
+	</div>
+ 
+	<script type="text/javascript">
+	    // Menu
+		const tombol = document.querySelector('.tombol');
+		const menu = document.querySelector('.menu');
+		tombol.addEventListener('click', () => {
+			menu.classList.toggle('aktif');
+		});
+		//Clone Logo
+		const logo = document.getElementById('logo');
+		const node = logo.cloneNode(true);
+		document.getElementById('cloneLogo').appendChild(node);
+	</script>
+ 
+</body>
+</html>
